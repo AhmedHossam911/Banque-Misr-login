@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banque Misr - Login</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body style=" background-color: #822230; background-position: center;">
+  
+  <nav>
+    <div class="logo"><img src="logo.png" alt=""></div>
+    <ul class="nav-links">
+      <li><a href="https://ahmedhossam911.github.io/Banque-Misr-website/">Home</a></li>
+      <li><a href="https://ahmedhossam911.github.io/Banque-Misr-about-us/">About Us</a></li>
+      <li><a href="https://ahmedhossam911.github.io/Banque-Misr-login/">Login</a></li>
+      <li><a href="https://ahmedhossam911.github.io/Banque-Misr-contact-us/">Contact Us</a></li>
+</ul>
+    <div class="language-switch">
+        <button id="en-btn" class="active">EN</button>
+        <button id="ar-btn">AR</button>
+    </div>
+</nav>
+
+  <div class="login-container">
+    <h1>Welcome to Bank Misr</h1>
+    <div class="login-options">
+      <button onclick="showLoginForm('individual')">Individual Login</button>
+      <button onclick="showLoginForm('corporation')">Corporation Login</button>
+    </div>
+    <div class="form-container" id="form-individual">
+      <h2>Individual Login</h2>
+      <form id="individual-login-form" onsubmit="return handleLogin('individual')">
+        <div class="form-group">
+          <label for="individual-username">Username:</label>
+          <input type="text" id="individual-username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="individual-password">Password:</label>
+          <input type="password" id="individual-password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div class="form-container" id="form-corporation">
+      <h2>Corporation Login</h2>
+      <form id="corporation-login-form" onsubmit="return handleLogin('corporation')">
+        <div class="form-group">
+          <label for="corporation-username">Username:</label>
+          <input type="text" id="corporation-username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="corporation-password">Password:</label>
+          <input type="password" id="corporation-password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+  
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
